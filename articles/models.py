@@ -8,6 +8,9 @@ class Article(models.Model):
     title = models.CharField(max_length=255)
     body = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
+    txt1=models.TextField(null=True)
+    txt2=models.TextField(null=True)
+
     author = models.ForeignKey(
         get_user_model(),
         on_delete=models.CASCADE,

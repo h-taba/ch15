@@ -20,7 +20,7 @@ class ArticleDetailView(LoginRequiredMixin, DetailView): # new
 
 class ArticleUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView): # new
     model = Article
-    fields = ('title', 'body',)
+    fields = ('title', 'body','txt1','txt2')
     template_name = 'article_edit.html'
 
     def test_func(self): # new
